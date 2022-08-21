@@ -28,7 +28,7 @@ function addNumbers2(num1: number, num2: number): void {
 // Classlarla çalışmak
 class Person {
     name: string;
-    age: number;
+    private age: number;
     phone: string;
 
     constructor(name: string, age: number, phone: string) {
