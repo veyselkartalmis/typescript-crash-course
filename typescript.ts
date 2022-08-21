@@ -28,7 +28,7 @@ function addNumbers2(num1: number, num2: number): void {
 // Classlarla çalışmak
 class Person {
     name: string;
-    private age: number;
+    age: number;
     phone: string;
 
     constructor(name: string, age: number, phone: string) {
@@ -46,3 +46,12 @@ class Person {
 
 let person1 = new Person("Veysel Kartalmis", 23, "05379307038");
 person1.showInfos();
+
+// Kalıtımla class oluşturmak
+class Employee extends Person {
+    salary: number;
+
+    constructor(name: string, age: number, phone: string, salary: number) {
+        super(name, age, phone);
+    }
+}

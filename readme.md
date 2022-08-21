@@ -25,3 +25,14 @@ class Person {
     }
 }
 ```
+=> Kalıtımla bir class oluşturmak için 'class Employee extends Person' şeklinde oluşturabilirim. Kalıtım konusuna PHP'den hakim olduğun için gerekirse oradaki notlarına bakabilirsin.
+
+```
+class Employee extends Person {
+    salary: number;
+
+    constructor(name: string, age: number, phone: string, salary: number) {
+        super(name, age, phone); //buradaki super() methodu üst class'tan alınan mirasla eşitlemiş olacak
+    }
+}
+```
