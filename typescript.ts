@@ -44,14 +44,25 @@ class Person {
     }
 }
 
-let person1 = new Person("Veysel Kartalmis", 23, "05379307038");
-person1.showInfos();
-
 // Kalıtımla class oluşturmak
 class Employee extends Person {
     salary: number;
 
     constructor(name: string, age: number, phone: string, salary: number) {
         super(name, age, phone);
+        this.salary = salary;
+    }
+
+    showInfos() {
+        super.showInfos();
+        console.log("Maaş: " + this.salary);
+    }
+
+    changeDepartment() {
+        console.log("Departman değiştirildi ...");
     }
 }
+
+let employee1 = new Employee("Veysel Kartalmis", 25, "05379307038", 1000);
+employee1.showInfos(); //miras aldığım için miras aldığım classın fonksiyonlarını da kullanabilirim
+employee1.changeDepartment();

@@ -46,13 +46,23 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
-var person1 = new Person("Veysel Kartalmis", 23, "05379307038");
-person1.showInfos();
 // Kalıtımla class oluşturmak
 var Employee = /** @class */ (function (_super) {
     __extends(Employee, _super);
     function Employee(name, age, phone, salary) {
-        return _super.call(this, name, age, phone) || this;
+        var _this = _super.call(this, name, age, phone) || this;
+        _this.salary = salary;
+        return _this;
     }
+    Employee.prototype.showInfos = function () {
+        _super.prototype.showInfos.call(this);
+        console.log("Maaş: " + this.salary);
+    };
+    Employee.prototype.changeDepartment = function () {
+        console.log("Departman değiştirildi ...");
+    };
     return Employee;
 }(Person));
+var employee1 = new Employee("Veysel Kartalmis", 25, "05379307038", 1000);
+employee1.showInfos(); //miras aldığım için miras aldığım classın fonksiyonlarını da kullanabilirim
+employee1.changeDepartment();

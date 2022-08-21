@@ -36,3 +36,10 @@ class Employee extends Person {
     }
 }
 ```
+Aynı şekilde miras alınan classtaki bir fonksiyonu da miras alınan yerde çağırarak üzerinde değişiklikler yapabiliriz.
+```
+showInfos() {
+        super.showInfos();
+        console.log("Maaş:" + this.salary);
+}
+```
