@@ -116,3 +116,36 @@ function addDatabse(database: IDatabase) {
 
 addDatabse(new MySql());
 addDatabse(new Mongodb());
+
+abstract class Database {
+    get() {
+        console.log("Database Get");
+    }
+
+    add() {
+        console.log("Database Add");
+    }
+
+    abstract update();
+    abstract delete();
+}
+
+class MySql2 extends Database {
+    delete() {
+        console.log("Database Delete");
+    }
+
+    update() {
+        console.log("Database Update");
+    }
+}
+
+class Mongodb2 extends Database {
+    delete() {
+        console.log("Database Delete");
+    }
+
+    update() {
+        console.log("Database Update");
+    }
+}

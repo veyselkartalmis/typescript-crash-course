@@ -44,4 +44,5 @@ showInfos() {
 }
 ```
 
-=> Interface yapısı gereği diğer sınıflara yol gösterici, rehberlik yapmak için oluşturulan, kendisinden implement edilen bir sınıfa doldurulması zorunlu olan bazı özelliklerin aktarılmasını sağlayan bir kavramdır. Bununlar alakalı bir örnek yazıldı typescript.ts içerisinde.
+=> Interface yapısı gereği diğer sınıflara yol gösterici, rehberlik yapmak için oluşturulan, kendisinden implement edilen bir sınıfa doldurulması zorunlu olan bazı özelliklerin aktarılmasını sağlayan bir kavramdır. Bununlar alakalı bir örnek yazıldı typescript.ts içerisinde. <br>
+=> abstract: Soyut sınıflar büyük projelerde kullanılırlar ve kalıtım özelliğini kullanarak kod tekrarını azaltırlar. Soyut sınıflar diğer sınıflara taban olmak için kullanılırlar. Nesne türetemezler. Önlerine “abstract” sözcüğü yazılarak soyutlaştırılırlar.

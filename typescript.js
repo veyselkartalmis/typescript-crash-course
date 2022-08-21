@@ -102,3 +102,40 @@ function addDatabse(database) {
 }
 addDatabse(new MySql());
 addDatabse(new Mongodb());
+var Database = /** @class */ (function () {
+    function Database() {
+    }
+    Database.prototype.get = function () {
+        console.log("Database Get");
+    };
+    Database.prototype.add = function () {
+        console.log("Database Add");
+    };
+    return Database;
+}());
+var MySql2 = /** @class */ (function (_super) {
+    __extends(MySql2, _super);
+    function MySql2() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    MySql2.prototype["delete"] = function () {
+        console.log("Database Delete");
+    };
+    MySql2.prototype.update = function () {
+        console.log("Database Update");
+    };
+    return MySql2;
+}(Database));
+var Mongodb2 = /** @class */ (function (_super) {
+    __extends(Mongodb2, _super);
+    function Mongodb2() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Mongodb2.prototype["delete"] = function () {
+        console.log("Database Delete");
+    };
+    Mongodb2.prototype.update = function () {
+        console.log("Database Update");
+    };
+    return Mongodb2;
+}(Database));
