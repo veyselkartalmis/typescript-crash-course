@@ -63,6 +63,42 @@ var Employee = /** @class */ (function (_super) {
     };
     return Employee;
 }(Person));
-var employee1 = new Employee("Veysel Kartalmis", 25, "05379307038", 1000);
-employee1.showInfos(); //miras aldığım için miras aldığım classın fonksiyonlarını da kullanabilirim
-employee1.changeDepartment();
+var MySql = /** @class */ (function () {
+    function MySql() {
+    }
+    MySql.prototype.add = function () {
+        console.log("MySql Add");
+    };
+    MySql.prototype.get = function () {
+        console.log("MySql Get");
+    };
+    MySql.prototype["delete"] = function () {
+        console.log("MySql Delete");
+    };
+    MySql.prototype.update = function () {
+        console.log("MySql Update");
+    };
+    return MySql;
+}());
+var Mongodb = /** @class */ (function () {
+    function Mongodb() {
+    }
+    Mongodb.prototype.add = function () {
+        console.log("MySql Add");
+    };
+    Mongodb.prototype.get = function () {
+        console.log("MySql Get");
+    };
+    Mongodb.prototype["delete"] = function () {
+        console.log("MySql Delete");
+    };
+    Mongodb.prototype.update = function () {
+        console.log("MySql Update");
+    };
+    return Mongodb;
+}());
+function addDatabse(database) {
+    database.add();
+}
+addDatabse(new MySql());
+addDatabse(new Mongodb());

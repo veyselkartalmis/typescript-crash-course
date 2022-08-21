@@ -43,3 +43,5 @@ showInfos() {
         console.log("Maaş:" + this.salary);
 }
 ```
+
+=> Interface yapısı gereği diğer sınıflara yol gösterici, rehberlik yapmak için oluşturulan, kendisinden implement edilen bir sınıfa doldurulması zorunlu olan bazı özelliklerin aktarılmasını sağlayan bir kavramdır. Bununlar alakalı bir örnek yazıldı typescript.ts içerisinde.

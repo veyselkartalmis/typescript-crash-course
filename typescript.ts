@@ -63,6 +63,56 @@ class Employee extends Person {
     }
 }
 
-let employee1 = new Employee("Veysel Kartalmis", 25, "05379307038", 1000);
-employee1.showInfos(); //miras aldığım için miras aldığım classın fonksiyonlarını da kullanabilirim
-employee1.changeDepartment();
+// let employee1 = new Employee("Veysel Kartalmis", 25, "05379307038", 1000);
+// employee1.showInfos(); //miras aldığım için miras aldığım classın fonksiyonlarını da kullanabilirim
+// employee1.changeDepartment();
+
+interface IDatabase {
+    add();
+    get();
+    delete();
+    update();
+}
+
+class MySql implements IDatabase {
+    add() {
+        console.log("MySql Add");
+    }
+
+    get() {
+        console.log("MySql Get");
+    }
+
+    delete() {
+        console.log("MySql Delete");
+    }
+
+    update() {
+        console.log("MySql Update");
+    }
+}
+
+class Mongodb implements IDatabase {
+    add() {
+        console.log("MySql Add");
+    }
+
+    get() {
+        console.log("MySql Get");
+    }
+
+    delete() {
+        console.log("MySql Delete");
+    }
+
+    update() {
+        console.log("MySql Update");
+    }
+}
+
+function addDatabse(database: IDatabase) {
+    database.add();
+}
+
+addDatabse(new MySql());
+addDatabse(new Mongodb());
